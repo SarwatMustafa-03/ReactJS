@@ -65,7 +65,7 @@ const About = () => {
           <h2
             className={`${
               isDark ? "text-white" : "text-[#000]"
-            } text-xl sm:text-2xl md:text-3xl font-semibold mb-2`}
+            } text-xl sm:text-2xl md:text-3xl font-semibold mb-2 overflow-hidden`}
           >
             Hi, I'm Sarwat Mustafa
           </h2>
