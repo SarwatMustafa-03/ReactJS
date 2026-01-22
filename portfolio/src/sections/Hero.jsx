@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <div className={isDark ? "h-[100vh] w-[100vw] flex justify-center items-center flex-col gap-8 bg-gradient-to-b from-gray-900 via-gray to-black text-center pt-10 lg:pt-5 md:pt-5" : "h-[100vh] w-[100vw] flex justify-center items-center flex-col gap-8 bg-gradient-to-b from-gray-100 via-gray-200 to-white text-center pt-10 lg:pt-5 md:pt-5"}>
       <h1 className={isDark ? "text-4xl lg:text-7xl md:text-5xl font-bold bg-gradient-to-r from-[#535353] to-[#d3d3d3] text-transparent bg-clip-text cursor-pointer overflow-y-hidden" : "text-4xl lg:text-7xl md:text-5xl font-bold text-black cursor-pointer overflow-y-hidden"}>
-        Front-End Developer
+        Full-Stack Developer
       </h1>
       <h2 className={isDark ? "text-gray-400 bg-clip-text cursor-pointer overflow-y-hidden w-[75vw] md:w-[50vw] lg:w-[50vw] text-center  text-sm md:text-2xl lg:text-2xl" : "text-[#737373] bg-clip-text cursor-pointer overflow-y-hidden w-[75vw] md:w-[50vw] lg:w-[50vw] text-center  text-sm md:text-2xl lg:text-2xl"}>
         Crafting modern web experiences with the MERN stack. Passionate about

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/theme-context";
 import { FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import SecTagLine from "../components/SecTagLine";
+import SecHeading from "../components/SecHeading";
 
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
@@ -14,33 +16,33 @@ const Projects = () => {
     },
     {
       title: "Travelo Website",
-      description: "Fully responsive portfolio built with React, Tailwind, and Dark/Light theme.",
+      description: "“Travelo — your smart travel buddy for discovering destinations, planning trips, and booking experiences in one seamless place.",
       link: "https://travelo-website-02.netlify.app/"
     },
     {
       title: "Nexus Analytics App",
-      description: "Socket.io chat app with private chats, typing indicator and real-time sync.",
+      description: "A unified, real-time view of your data for faster insights and smarter decisions.",
       link: "https://nexus-analytics-website.netlify.app/"
     },
     {
-      title: "E-Commerce UI",
-      description: "Modern e-commerce frontend with filtering, product listing and UI components.",
-      link: ""
+      title: "Conquest Air Cargo",
+      description: "Conquest Air Cargo — reliable, fast, and secure air freight solutions connecting global destinations with precision.",
+      link: "https://conquest-air-cargo.netlify.app/"
     }
   ];
 
   return (
     <div
       className={
-        `w-full py-16 px-5 flex flex-col items-center gap-10   ` +
+        `w-full py-26 px-5 flex flex-col items-center gap-10   ` +
         (isDark ? "bg-black text-white" : "bg-white text-black")
       }
      >
       {/* Heading */}
-      <h2 className="text-3xl font-bold overflow-hidden  ">Projects</h2>
-      <p className="text-center max-w-2xl opacity-80">
-        A selection of my recent work showcasing skills in React, UI development and full-stack apps.
-      </p>
+      <SecHeading>Projects</SecHeading>
+      <SecTagLine>A selection of my recent work showcasing skills in React, UI development and full-stack apps.
+</SecTagLine>
+    
 
       {/* Cards Grid */}
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">

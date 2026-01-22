@@ -42,7 +42,7 @@ const Experience = () => {
   return (
     <div
       className={
-        `flex flex-col gap-5 items-center mb-8 justify-center h-auto w-full pt-10 ` +
+        `flex flex-col gap-5 items-center  justify-center h-auto w-full pt-10 ` +
         (isDark ? "bg-black text-white" : "bg-white text-black")
       }
     >

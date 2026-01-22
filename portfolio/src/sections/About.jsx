@@ -38,8 +38,8 @@ const About = () => {
 
   const isDark = theme === "dark";
   const backGroundAbout = isDark
-    ? "min-h-screen w-full !bg-[#020202] flex flex-col justify-center items-center gap-5 py-16 px-4 overflow-hidden"
-    : "min-h-screen w-full !bg-[#F9FAFB] flex flex-col justify-center items-center gap-5 py-16 px-4 overflow-hidden";
+    ? "min-h-screen w-full !bg-[#020202] flex flex-col justify-center items-center gap-5 px-4 overflow-hidden"
+    : "min-h-screen w-full !bg-[#F9FAFB] flex flex-col justify-center items-center gap-5 px-4 overflow-hidden";
 
   return (
     <div className={backGroundAbout}>

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/theme-context";
 import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa";
+import SecTagLine from "../components/SecTagLine";
+import SecHeading from "../components/SecHeading";
 
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
@@ -15,10 +17,10 @@ const Contact = () => {
     >
       {/* Heading */}
       <div className="flex flex-col items-center gap-3">
-        <h2 className="text-4xl font-bold overflow-hidden">Contact Me</h2>
-        <p className="text-center max-w-xl opacity-70 leading-relaxed">
+        <SecHeading >Contact Me</SecHeading>
+        <SecTagLine>
           Feel free to reach out for collaborations, project inquiries, or just to say hello.
-        </p>
+        </SecTagLine>
       </div>
 
       {/* Main Layout */}
