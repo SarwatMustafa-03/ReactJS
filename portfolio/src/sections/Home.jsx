@@ -3,6 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { ThemeContext } from "../context/theme-context";
 import { useContext } from "react";
+import Projects from "./Projects";
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);
@@ -32,23 +33,40 @@ const Home = () => {
         clean code, innovative solutions, and bringing ideas to life.
       </h2>
       <div className="flex gap-5">
-        <button className={btnStyling}>View Projects</button>
-        <button className={btnStyling}>Download CV</button>
-        <button className={btnStyling}>Contact Me</button>
-      </div>
+  {/* Scroll to Projects */}
+  <button
+    className={btnStyling}
+    onClick={() => {
+      const section = document.getElementById("projects");
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }}
+  >
+    View Projects
+  </button>
+
+
+
+  {/* Scroll to Contact */}
+  <button
+    className={btnStyling}
+    onClick={() => {
+      const section = document.getElementById("contact");
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }}
+  >
+    Contact Me
+  </button>
+</div>
+
       <div className="flex gap-2  overflow-hidden">
-        <a href="" className={`${iconStyling}`}>
+        <a href="https://github.com/sarwatmustafa-03" className={`${iconStyling}`}>
           <FaGithub />
         </a>
-        <a href="" className={`${iconStyling}`}>
+        <a href="https://www.linkedin.com/in/sarwat-mustafa-bb0549321/" className={`${iconStyling}`}>
           <FaLinkedin />
         </a>
-        <a href="" className={`${iconStyling}`}>
-          <FaFileAlt />
-        </a>
-        <a href="" className={`${iconStyling}`}>
-          <MdEmail />
-        </a>
+    
+        
       </div>
       <BiDownArrowAlt className={`${iconStyling} text-5xl text-gray-500`} />
     </div>

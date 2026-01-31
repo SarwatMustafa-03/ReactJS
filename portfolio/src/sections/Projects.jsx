@@ -10,6 +10,17 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Random Quotes Generator",
+      description: "Discover inspiring quotes with our Random Quotes Generator!",
+      link: "https://meek-pasca-4f2f86.netlify.app/quotes"
+    },
+    {
+      title: "FlashCard Quiz App",
+      description: "Learn fast, remember better with our interactive flashcard quiz!",
+      link: "https://code-alpha-flashcard-quiz-app01.netlify.app/"
+    },
+
+    {
       title: "HealthCare Appointment App",
       description: "Quality care starts with a quick appointment.",
       link: "https://healthcare-appointment-app-01.netlify.app"
