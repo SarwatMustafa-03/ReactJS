@@ -10,6 +10,8 @@ const Contact = () => {
 
   return (
     <div
+      id="contact"  // ← Add this line
+
       className={
         `w-full py-20 px-6 flex flex-col items-center gap-14 ` +
         (isDark ? "bg-black text-white" : "bg-white text-black")

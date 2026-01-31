@@ -27,20 +27,23 @@ const Experience = () => {
     },
     {
       icon: <FaCertificate />,
-      num: "10+",
+      num: "5+",
       title: "Certifications",
       description: "Professional qualifications earned"
     },
     {
       icon: <FaProjectDiagram />,
-      num: "15+",
+      num: "10+",
       title: "Projects Completed",
       description: "Successful project deliveries"
-    }
+    },
+    
   ];
 
   return (
     <div
+      id="experience"  // ← Add this line
+
       className={
         `flex flex-col gap-5 items-center  justify-center h-auto w-full pt-10 ` +
         (isDark ? "bg-black text-white" : "bg-white text-black")

@@ -4,7 +4,7 @@ import { BiDownArrowAlt } from "react-icons/bi";
 import { ThemeContext } from "../context/theme-context";
 import { useContext } from "react";
 
-const Hero = () => {
+const Home = () => {
   const { theme } = useContext(ThemeContext);
 
   const isDark = theme === "dark";
@@ -20,7 +20,10 @@ const Hero = () => {
 
     
   return (
-    <div className={isDark ? "h-[100vh] w-[100vw] flex justify-center items-center flex-col gap-8 bg-gradient-to-b from-gray-900 via-gray to-black text-center pt-10 lg:pt-5 md:pt-5" : "h-[100vh] w-[100vw] flex justify-center items-center flex-col gap-8 bg-gradient-to-b from-gray-100 via-gray-200 to-white text-center pt-10 lg:pt-5 md:pt-5"}>
+    <div
+      id="home"  // ← Add this line
+
+    className={isDark ? "h-[100vh] w-[100vw] flex justify-center items-center flex-col gap-8 bg-gradient-to-b from-gray-900 via-gray to-black text-center pt-10 lg:pt-5 md:pt-5" : "h-[100vh] w-[100vw] flex justify-center items-center flex-col gap-8 bg-gradient-to-b from-gray-100 via-gray-200 to-white text-center pt-10 lg:pt-5 md:pt-5"}>
       <h1 className={isDark ? "text-4xl lg:text-7xl md:text-5xl font-bold bg-gradient-to-r from-[#535353] to-[#d3d3d3] text-transparent bg-clip-text cursor-pointer overflow-y-hidden" : "text-4xl lg:text-7xl md:text-5xl font-bold text-black cursor-pointer overflow-y-hidden"}>
         Full-Stack Developer
       </h1>
@@ -52,4 +55,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

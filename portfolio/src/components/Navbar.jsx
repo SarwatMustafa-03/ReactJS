@@ -3,17 +3,21 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { ThemeContext } from "../context/theme-context";
+import { NavLink } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { toggleTheme, theme } = useContext(ThemeContext);
   const navLinks = [
-    "Home",
-    "About",
-    "Skills",
-    "Experience",
-    "Projects",
-    "Contact",
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+        { name: "Projects", path: "/projects" },
+
+    { name: "Skills", path: "/skills" },
+    { name: "Experience", path: "/experience" },
+  
+    { name: "Contact", path: "/contact" },
   ];
 
   // Prevent body scroll when mobile menu is open
@@ -86,24 +90,24 @@ const Navbar = () => {
           >
             {navLinks.map((link) => (
               <li
-                key={link}
+                key={link.name}
                 className={`${hoverTextStyles} relative after:block after:h-[2px] after:w-0 ${underlineStyles} after:transition-all after:duration-300 hover:after:w-full transition-colors duration-300`}
               >
-                <a href={`#${link.toLowerCase()}`} className="py-2 px-1 block">
-                  {link}
-                </a>
+                <NavLink  to={link.path} className="py-2 px-1 block">
+                  {link.name}
+                </NavLink>
               </li>
             ))}
+
 
             {/* Theme Toggle Button */}
             <li>
               <button
                 onClick={toggleTheme}
-                className={`p-2 rounded-full transition-all duration-300 ${
-                  isDark
+                className={`p-2 rounded-full transition-all duration-300 ${isDark
                     ? "bg-gray-800 hover:bg-gray-700 text-yellow-400 hover:text-yellow-300"
                     : "bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-700"
-                }`}
+                  }`}
                 aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
               >
                 {isDark ? <BsSun size={18} /> : <BsMoon size={18} />}
@@ -127,11 +131,10 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${
-            isOpen
+          className={`md:hidden transition-all duration-300 ease-in-out ${isOpen
               ? "max-h-full opacity-100"
               : "max-h-0 opacity-0 overflow-hidden"
-          }`}
+            }`}
         >
           <div
             style={{
@@ -147,37 +150,35 @@ const Navbar = () => {
             <ul
               className={`flex flex-col items-center py-6 space-y-6 font-medium ${textStyles}`}
             >
-              {navLinks.map((link) => (
-                <li
-                  key={link}
-                  className={`${hoverTextStyles} relative after:block after:h-[2px] after:w-0 ${underlineStyles} after:transition-all after:duration-300 hover:after:w-full transition-colors duration-300`}
-                >
-                  <a
-                    href={`#${link.toLowerCase()}`}
-                    onClick={() => setIsOpen(false)}
-                    className="py-2 px-4 block"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+{navLinks.map((link) => (
+  <li
+    key={link.name}
+    className={`${hoverTextStyles} relative after:block after:h-[2px] after:w-0 ${underlineStyles} after:transition-all after:duration-300 hover:after:w-full transition-colors duration-300`}
+  >
+    <NavLink
+      to={link.path}
+      onClick={() => setIsOpen(false)}
+      className="py-2 px-4 block"
+    >
+      {link.name}
+    </NavLink>
+  </li>
+))}
 
               {/* Mobile Theme Toggle */}
               <li
-                className={`pt-4 border-t w-full flex justify-center ${
-                  isDark ? "border-white/20" : "border-gray-300/30"
-                }`}
+                className={`pt-4 border-t w-full flex justify-center ${isDark ? "border-white/20" : "border-gray-300/30"
+                  }`}
               >
                 <button
                   onClick={() => {
                     toggleTheme();
                     setIsOpen(false);
                   }}
-                  className={`flex items-center space-x-2 p-3 rounded-full transition-all duration-300 ${
-                    isDark
+                  className={`flex items-center space-x-2 p-3 rounded-full transition-all duration-300 ${isDark
                       ? "bg-gray-800 hover:bg-gray-700 text-yellow-400 hover:text-yellow-300"
                       : "bg-gray-100 hover:bg-gray-200 text-orange-600 hover:text-orange-700"
-                  }`}
+                    }`}
                   aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
                 >
                   {isDark ? <BsSun size={18} /> : <BsMoon size={18} />}

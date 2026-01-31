@@ -5,12 +5,13 @@ import { ThemeContext } from "../context/theme-context";
 const experiences = [
   {
     type: "education",
-    title: "Bachelor of Computer Science",
-    organization: "University of Technology",
-    location: "Toronto, Canada",
-    period: "01 Jan 2020 - 04",
+    title: "Bachelor of Economics",
+    organization: "University of Karachi",
+    location: "Karachi, Pakistan",
+    period: "2024-2027",
     description:
-      "Specialized in Software Engineering with focus on web technologies, data structures, and algorithms. Graduated with honors.",
+      "Applied economic principles with modern technology to analyze data, optimize systems, and build scalable digital solutions for informed, impact-driven decision-making."
+,
     achievements: [
       "Dean's List for 3 consecutive semesters",
       "Led final-year project on AI-powered web applications",

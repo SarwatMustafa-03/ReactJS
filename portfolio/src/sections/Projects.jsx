@@ -33,6 +33,8 @@ const Projects = () => {
 
   return (
     <div
+      id="projects"  // ← Add this line
+
       className={
         `w-full py-26 px-5 flex flex-col items-center gap-10   ` +
         (isDark ? "bg-black text-white" : "bg-white text-black")

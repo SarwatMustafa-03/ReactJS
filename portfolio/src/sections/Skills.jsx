@@ -41,7 +41,10 @@ const skillCardData = [
   const [activeBtn, setActiveBtn] = useState("All");
 
   return (
-    <div className={`flex justify-center items-center flex-col gap-5 ${isDark ? "bg-black" : "bg-white"}`}>
+    <div 
+      id="skills"  // ← Add this line
+
+    className={`flex justify-center items-center flex-col gap-5 ${isDark ? "bg-black" : "bg-white"}`}>
       <SecHeading>Skills & Technologies</SecHeading>
       <SecTagLine>
         A comprehensive toolkit for building modern web applications

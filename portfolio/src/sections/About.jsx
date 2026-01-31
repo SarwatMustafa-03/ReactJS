@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import SecHeading from "../components/SecHeading";
 import SecTagLine from "../components/SecTagLine";
-import { FaCode, FaRegLightbulb, FaUsers } from "react-icons/fa";
+import { FaBriefcase,  FaRegLightbulb, FaUsers } from "react-icons/fa";
 import { GiCoffeeCup } from "react-icons/gi";
 import { ThemeContext } from "../context/theme-context";
 import Cards from "../components/Cards";
@@ -11,20 +11,21 @@ const About = () => {
   
   const aboutCards = [
     {
-      icon: <FaCode />,
-      num: "3+",
-      title: "Years of Experience",
-      description: "Building web applications",
-    },
+    icon: <FaBriefcase />,
+    num: "Internship",
+    title: "Web Development Intern",
+    description: "Completed Web Development Internship at CodeAlpha"
+  },
+
     {
       icon: <GiCoffeeCup />,
-      num: "50+",
+      num: "10+",
       title: "Projects Completed",
       description: "From concept to deployment",
     },
     {
       icon: <FaRegLightbulb />,
-      num: "20+",
+      num: "5+",
       title: "Technologies",
       description: "Modern tech stack",
     },
@@ -42,7 +43,11 @@ const About = () => {
     : "min-h-screen w-full !bg-[#F9FAFB] flex flex-col justify-center items-center gap-5 px-4 overflow-hidden";
 
   return (
-    <div className={backGroundAbout}>
+
+    <div
+      id="about" 
+
+    className={backGroundAbout}>
       <SecHeading>About Me</SecHeading>
       <SecTagLine>
         Passionate developer with a love for creating innovative solutions
@@ -75,7 +80,7 @@ const About = () => {
               isDark ? "text-[#99A1AF]" : "text-[#737373]"
             } text-base sm:text-lg leading-relaxed`}
           >
-            I'm a passionate full-stack developer with over 3 years of
+            I'm a passionate full-stack developer with over years of
             experience in building modern web applications. I specialize in the
             MERN stack and love creating user-friendly interfaces that solve
             real-world problems.
